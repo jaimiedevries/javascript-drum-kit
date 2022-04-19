@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather&display=swap');
+
+:root {
+    /* Colors */
+    --clr-bg-100: hsl(10, 71%, 90%);
+    --clr-primary-50: hsl(0, 0%, 0%, 0.5);
+    --clr-primary-100: hsl(0, 0%, 0%);
+    --clr-neutral-50: hsl(0, 0%, 100%, 0.4);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    /* Font-Family */
+    --ff-base: 'Inter', sans-serif;
+    --ff-heading: 'Merriweather', serif;
+    
+    /* Font-size */
+    --fs-small: 0.75rem;
+    --fs-medium: 1rem;
+    --fs-large: 2rem;
+    --fs-extra-large: 2.5rem;
+
+    /* Spacing */
+    --spacer-smallest: .5rem;
+    --spacer-small: 1rem;
+    --spacer-medium: 1.5rem;
+    --spacer-large: 4rem;
+
+    /* Shadows */
+    --sw-container: box-shadow: 8px 8px 8px rgba(55, 17, 8, 0.25), inset 4px 4px 9px rgba(0, 0, 0, 0.25);
+}
+
+/* Utility classes */
+.container {
+    width: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+}
+
+.flow > * + * {
+    margin-top: var(--gap, var(--spacer-small));
+}
+
+.row {
+    display: flex;
+    gap: var(--spacer-small);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Typography */
+.main-head {
+    font-family: var(--ff-heading);
+    font-size: var(--fs-extra-large);
+    color: var(--clr-primary-100);
+}
+
+.sub-head {
+    font-family: var(--ff-base);
+    font-size: var(--fs-medium);
+    color: var(--clr-primary-50);
+}
+
+/* General Styling */
+body {
+    background-color: var(--clr-bg-100);
+    font-family: var(--ff-base);
+}
+
+/* Layout */
+header {
+    padding: var(--spacer-medium) 0;
+}
+
+section {
+    padding: var(--spacer-large) 0;
+    text-align: center;
+}
+
+.keys {
+    --gap: var(--spacer-large);
+    display: flex;
+    color: var(--clr-neutral-100);
+    flex-direction: column;
+    gap: var(--spacer-small);
+    max-width: 40rem;
+    padding: 56px;
+    border: 1px solid hsl(0, 0%, 100%, 0.7);
+    background-color: #252525;
+    box-shadow: var(--sw-container);
+    border-radius: 24px;
+    margin-inline: auto;
+}
+
+.key {
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 72px;
+    font-size: 1.5rem;
+    color: var(--clr-neutral-100);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacer-smallest);
+    padding: 1rem;
+    background: linear-gradient(132.18deg, rgba(46, 46, 46, 0.57) 31.24%, #2E2E2E 88.57%);
+    border: 2px solid rgba(71, 71, 71, 0.28);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 0px #1A1A1A, 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
+.sound {
+    font-size: var(--fs-small);
+    color: var(--clr-neutral-50);
+}
