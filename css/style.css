@@ -25,7 +25,7 @@
     --spacer-large: 4rem;
 
     /* Shadows */
-    --sw-container: box-shadow: 8px 8px 8px rgba(55, 17, 8, 0.25), inset 4px 4px 9px rgba(0, 0, 0, 0.25);
+    --sw-container: box-shadow: 24px 8px 8px rgba(55, 17, 8, 0.25), inset 24px 24px 24px rgba(0, 0, 0, 0.25);
 }
 
 /* Utility classes */
@@ -80,16 +80,19 @@ section {
     color: var(--clr-neutral-100);
     flex-direction: column;
     gap: var(--spacer-small);
-    max-width: 40rem;
+    max-width: 30rem;
     padding: 56px;
     border: 1px solid hsl(0, 0%, 100%, 0.7);
     background-color: #252525;
     box-shadow: var(--sw-container);
+    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.4422) 0%, rgba(255, 255, 255, 0.67) 100%),
+    linear-gradient(0deg, #000000, #000000);
     border-radius: 24px;
     margin-inline: auto;
 }
 
 .toets {
+    user-select: none;
     cursor: pointer;
     display: flex;
     flex-grow: 1;
