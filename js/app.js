@@ -19,13 +19,13 @@ function speelAudio (e){
     if(e.type === 'click' && e.target.matches('.toets')){
         // toets bevat nu het element waar op is geklikt.
         toets = e.target;
-        // Wanneer er een class bestaat met als data-key degene waar ik op heb geklikt, sla dat dan op.
+        // Wanneer er een class bestaat met als data-key degene waar ik op heb geklikt, sla dat dan op. 
         audio = document.querySelector(`audio[data-key="${e.target.dataset.key}"]`);
     }else {
         // Wanneer er een audio element bestaat met als data-key de toets die je invoert sla die dan op.
-        const audio = document.querySelector(`audio[data-key="${e.key}"]`);
+         audio = document.querySelector(`audio[data-key="${e.key}"]`);
         // Wanneer er een class toets bestaat met als data-key de toets die je invoert sla die dan op.
-        const toets = document.querySelector(`.toets[data-key="${e.key}"]`);
+         toets = document.querySelector(`.toets[data-key="${e.key}"]`);
     }
     // Wanneer er geen matchende audio is gevonden stop dan de functie.
     if(!audio) return;
